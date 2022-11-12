@@ -1,15 +1,19 @@
 import React,{useState} from 'react'
-import { Link } from 'react-router-dom'
+import { Link , useNavigate} from 'react-router-dom'
 import { BiCart } from "react-icons/bi";
 import {FaUserAlt} from "react-icons/fa";
 import HeaderCard from './HeaderCard';
 const Header = () => {
     const [showMenu,setshowMenu] = useState('none');
+    const navigate = useNavigate();
     const showMenue =()=>{
         setshowMenu('block');
     }
     const hideMenu =()=>{
         setshowMenu('none');
+    }
+    const goToProduct =()=>{
+      navigate('/products/all')
     }
   return (
     <div className='conatiner-fluid m-0 position-sticky top-0 shadow'>
@@ -29,7 +33,7 @@ const Header = () => {
         <li className="nav-item mx-4 fw-bold d-flex align-items-center justify-content-center d-none">
           <Link to={'/Register'} className="nav-link active" aria-current="page" href="#">Sing Up</Link>
         </li>
-        <li onMouseEnter={showMenue} className="nav-item mx-4 fw-bold d-flex align-items-center justify-content-center" style={{cursor:'pointer'}}>
+        <li onMouseEnter={showMenue} onClick={goToProduct} className="nav-item mx-4 fw-bold d-flex align-items-center justify-content-center" style={{cursor:'pointer'}}>
            Products         
         </li>
         <li className="nav-item mx-4 fw-bold d-flex align-items-center justify-content-center">
