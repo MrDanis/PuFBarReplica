@@ -24,7 +24,7 @@ const Footer = () => {
            <p className='text-center d-flex align-items-center fs-5 fw-bold text-dark'><GiTensionSnowflake className='mx-1 fs-1'></GiTensionSnowflake>Tobacco-Free Nicotine</p>       
            </div> 
         </div>
-        <div className='row w-100 py-5 d-flex justify-content-center m-0 p-0 border border-0 border-danger' style={{backGroundColor:'#e9e9e9'}}>
+        <div className='row w-100 py-5 d-flex justify-content-center m-0 p-0 border border-0 border-danger' style={{backgroundColor:'#d5d5d5'}}>
             <div className='row w-75 m-0 p-0 border border-0 border-dark d-flex justify-content-evenly'>
              <div className='col-2'>
                   <h3 className='mb-4 fs-4'>Support</h3>
