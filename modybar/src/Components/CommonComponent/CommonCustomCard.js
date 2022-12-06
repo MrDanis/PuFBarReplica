@@ -1,10 +1,11 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 const CommonCustomCard = (props) => {
   return (
     <>
+    <Link to={props.redirectdTo}>
     <div className={props.mainParent}>
-      <div className={props.childOneClass}>
+      <div className={props.childOneClass}> 
         <h3>{props.heading}</h3>
         <p className='mb-0'>{props.quantity}</p>
         <p>{props.flavour==="test"?'':props.flavour}</p>
@@ -14,6 +15,7 @@ const CommonCustomCard = (props) => {
         <img className='img-fluid m-9 p-0' src={props.explainImage} alt='test'></img>     
       </div>
     </div>
+    </Link>
     </>
   )
 }
