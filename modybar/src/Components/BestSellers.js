@@ -5,7 +5,7 @@ import { Tabs } from 'antd';
 const BestSellers = (props) => {
   return (
     <>
-    <div className='container-fluid mt-5 m-0 p-0 w-75'>
+    <div className='container-fluid mt-5 m-0 p-0 w-75' style={{zIndex:-111}}>
      <div className='row mt-5 m-0 p-0'>
           <div className='col-12 mt-3 m-0 p-0 d-flex align-items-center justify-content-center'>
                 <h1 className='mb-3'>{props.heading}</h1>

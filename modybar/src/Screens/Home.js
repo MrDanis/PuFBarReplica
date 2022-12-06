@@ -21,7 +21,7 @@ const Home = () => {
              {/* News and Update */}
               <NewsAndUpdates heading='Puff Bar News & Updates'></NewsAndUpdates>
           </div>
-          <div className='col-12 m-0 p-0'>
+          <div className='col-12 m-0 p-0'style={{zIndex:-111}}>
               {/* Explaination */}
             <ExplainationTabs></ExplainationTabs>
           </div>
