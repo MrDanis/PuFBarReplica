@@ -33,13 +33,13 @@ const Header = () => {
         <li className="nav-item mx-4 fw-bold d-flex align-items-center justify-content-center d-none">
           <Link to={'/Register'} className="nav-link active" aria-current="page" href="#">Sing Up</Link>
         </li>
-        <li onMouseEnter={showMenue} onClick={goToProduct} className="nav-item mx-4 fw-bold d-flex align-items-center justify-content-center" style={{cursor:'pointer'}}>
+        <li onClick={goToProduct} className="nav-item mx-4 fw-bold d-flex align-items-center justify-content-center" style={{cursor:'pointer'}}>
            Products         
         </li>
         <li className="nav-item mx-4 fw-bold d-flex align-items-center justify-content-center">
           <a className="nav-link active" aria-current="page" href="#">About</a>
         </li>
-        <li className="nav-item dropdown mx-4 fw-bold d-flex align-items-center justify-content-center">
+        <li className="nav-item dropdown mx-4 fw-bold d-flex align-items-center justify-content-center ">
           <a className="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Contact
           </a>

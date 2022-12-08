@@ -8,7 +8,7 @@ const OvweCustomer = () => {
              <h1 className='text-center fw-bold'>Our Customers Love Us!</h1>
         </div>
         <div class="row w-75 g-2 d-flex justify-content-around">
-            <div class="col-4">
+            <div class="col-12 col-md-4">
               <div class="p-3">
                 {/*is ko baad main component bnana hai  */}
                  <div className='container-fluid m-0 p-0 border border-0 border-success shadow'>
@@ -27,7 +27,7 @@ const OvweCustomer = () => {
                   {/*is ko baad main component bnana hai  */}
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4">
               <div class="p-3">
                 {/*is ko baad main component bnana hai  */}
                 <div className='container-fluid m-0 p-0 border border-0 border-success shadow'>
@@ -46,7 +46,7 @@ const OvweCustomer = () => {
                   {/*is ko baad main component bnana hai  */}
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4">
               <div class="p-3">
                 {/*is ko baad main component bnana hai  */}
                 <div className='container-fluid m-0 p-0 border border-0 border-success shadow'>
@@ -67,10 +67,10 @@ const OvweCustomer = () => {
             </div>
         </div>
         <div className='row mt-5 w-75 border border-0 border-success'>
-           <div className='col-3'>
+           <div className='col-12 col-md-3'>
                   <img className='img-fluid m-0 p-0 ' src='./Satisfy1.png' alt='test'></img>
            </div>
-           <div className='col-6 border border-0 border-success'>
+           <div className='col-12 col-md-6 border border-0 border-success'>
                  <div className='row-75 m-0 p-0 border border-0 border-danger'>
                    <div className='col-10'>
                     <h1 className='fw-bold mb-3'>Smooth, Satisfying, Simple.</h1>
@@ -79,7 +79,7 @@ const OvweCustomer = () => {
                    </div>
                  </div>
            </div>
-           <div className='col-3'>
+           <div className='col-12 col-md-3'>
            <img className='img-fluid m-0 p-0 ' src='./Satisfy2.png' alt='test'></img>
            </div>
         </div>

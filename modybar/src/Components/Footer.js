@@ -10,23 +10,23 @@ const Footer = () => {
            <div className='col-12 mt-4'>
             <h1 className='text-center fw-bold text-dark'>We've got you covered</h1>       
            </div>  
-           <div className='col-3 mt-4'>
+           <div className='col-12 col-sm-6 col-md-3 mt-4'>
         
            <p className='text-center d-flex align-items-center fs-5 fw-bold text-dark'><TbTruckDelivery className='mx-1 fs-1'></TbTruckDelivery>Fast Delivery</p>          
            </div> 
-           <div className='col-3 mt-4'>
+           <div className='col-12 col-sm-6 col-md-3 mt-4'>
            <p className='text-center d-flex align-items-center fs-5 fw-bold text-dark'><DiJava className='mx-1 fs-1'></DiJava>Authentic Taste</p>       
            </div> 
-           <div className='col-3 mt-4'>
+           <div className='col-12 col-sm-6 col-md-3 mt-4'>
            <p className='text-center d-flex align-items-center fs-5 fw-bold text-dark'><GiUsaFlag className='mx-1 fs-1'></GiUsaFlag>Designed in the US</p>          
            </div> 
-           <div className='col-3 mt-4'>
+           <div className='col-12 col-sm-6 col-md-3 mt-4'>
            <p className='text-center d-flex align-items-center fs-5 fw-bold text-dark'><GiTensionSnowflake className='mx-1 fs-1'></GiTensionSnowflake>Tobacco-Free Nicotine</p>       
            </div> 
         </div>
         <div className='row w-100 py-5 d-flex justify-content-center m-0 p-0 border border-0 border-danger' style={{backgroundColor:'#d5d5d5'}}>
             <div className='row w-75 m-0 p-0 border border-0 border-dark d-flex justify-content-evenly'>
-             <div className='col-2'>
+             <div className='col-sm-5 col-md-2'>
                   <h3 className='mb-4 fs-4'>Support</h3>
                   <p className='mb-1 text-secondary fs-6'>Contact Us</p>
                   <p className='mb-1 text-secondary fs-6'>Shipping Information</p>
@@ -34,7 +34,7 @@ const Footer = () => {
                   <p className='mb-1 text-secondary fs-6'>Verify Device</p>
                   <p className='mb-1 text-secondary fs-6'>Product Warranty</p>
              </div>
-             <div className='col-2'>
+             <div className='col-12 col-sm-5 col-md-2'>
                   <h3 className='mb-4 fs-4'>Support</h3>
                   <p className='mb-1 text-secondary fs-6'>Contact Us</p>
                   <p className='mb-1 text-secondary fs-6'>Shipping Information</p>
@@ -42,7 +42,7 @@ const Footer = () => {
                   <p className='mb-1 text-secondary fs-6'>Verify Device</p>
                   <p className='mb-1 text-secondary fs-6'>Product Warranty</p>
              </div>
-             <div className='col-2'>
+             <div className='col-12 col-sm-5 col-md-2'>
                   <h3 className='mb-4 fs-4'>Support</h3>
                   <p className='mb-1 text-secondary fs-6'>Contact Us</p>
                   <p className='mb-1 text-secondary fs-6'>Shipping Information</p>
@@ -50,7 +50,7 @@ const Footer = () => {
                   <p className='mb-1 text-secondary fs-6'>Verify Device</p>
                   <p className='mb-1 text-secondary fs-6'>Product Warranty</p>
              </div>
-             <div className='col-4'>
+             <div className='col-12 col-sm-7 col-md-4'>
                   <h3 className='mb-4 fs-4'>Subscribe to the Newsletter</h3>
                   <p className='mb-1 text-secondary fs-6 d-flex aligh-items-center'>
                     <input placeholder='email' className='p-2 mx-1 bg-light shadow border-0 rounded'></input>

@@ -21,7 +21,7 @@ const SpecificProduct = () => {
         <p className='mb-1 fw-bold'><span className='fs-6 fw-bold'>Quantity</span> <input className='p-1 w-25 mx-1 border-1 bg-light' placeholder='0' type='number' style={{borderRadius:'10px'}}></input></p>
          <button className='btn btn-dark text-light w-100 mt-3'>Sold Out</button>
         <div className='row w-100 m-0 p-0 g-2 border border-0 border-success'>
-            <div className="col-12 col-md-6 col-lg-3">
+            <div className="col-6 col-md-6 col-lg-3">
                <div className="p-3 border-0">
                 <img className='img-fluid m-0 p-0' src={S1} alt='test'></img>
                 <p className='mt-1 mb-1 fw-bold'>Pre filled 1.8 ml</p>
@@ -29,7 +29,7 @@ const SpecificProduct = () => {
                 <p className='mb-1 fw-bold'>Nic</p>
                </div>
             </div>
-            <div className="col-12 col-md-6 col-lg-3">
+            <div className="col-6 col-md-6 col-lg-3">
               <div className="p-3 border-0">
               <img className='img-fluid m-0 p-0' src={S2} alt='test'></img>
               <p className='mt-1 mb-1 fw-bold'>Internal</p>
@@ -37,7 +37,7 @@ const SpecificProduct = () => {
               <p className='mt-1 mb-1 fw-bold'>350mAh</p>
               </div>
             </div>
-            <div className="col-12 col-md-6 col-lg-3">
+            <div className="col-6 col-md-6 col-lg-3">
               <div className="p-3 border-0">
               <img className='img-fluid m-0 p-0' src={S3} alt='test'></img>
               <p className='mt-1 mb-1 fw-bold'>5% Salt Nicotine</p>
@@ -45,7 +45,7 @@ const SpecificProduct = () => {
               <p className='mt-1 mb-1 fw-bold'>draw</p>
               </div>
             </div>
-            <div className="col-12 col-md-6 col-lg-3">
+            <div className="col-6 col-md-6 col-lg-3">
               <div className="p-3 border-0">
               <img className='img-fluid m-0 p-0' src={S4} alt='test'></img>
               <p className='mt-1 mb-1 fw-bold'>Compact</p>
@@ -69,25 +69,25 @@ const SpecificProduct = () => {
           </h1>
         </div>
           <div className='row m-0 p-0 w-75 border border-0 border-danger gx-5'>
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
               <div class="d-flex flex-column align-items-center justify-content-center p-3 border-0 rounded shadow bg-light">
                 <p className='fs-6 mb-0 fw-normal text-center'>PUFFS</p>
                 <p className='fs-5 mb-0 fw-bold'>~ 500</p>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
             <div class="d-flex flex-column align-items-center justify-content-center p-3 border-0 shadow bg-light">
                 <p className='fs-6 mb-0 fw-normal text-center'>NICOTINE</p>
                 <p className='fs-5 mb-0 fw-bold'>5%</p>
             </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
             <div class="d-flex flex-column align-items-center justify-content-center p-3 border-0 shadow bg-light">
                 <p className='fs-6 mb-0 fw-normal text-center'>BATTERY</p>
                 <p className='fs-5 mb-0 fw-bold'>350mAh</p>
             </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
             <div class="d-flex flex-column align-items-center justify-content-center p-3 border-0 shadow bg-light">
                 <p className='fs-6 mb-0 fw-normal text-center'>LIQUID</p>
                 <p className='fs-5 mb-0 fw-bold'>1.8ml</p>
