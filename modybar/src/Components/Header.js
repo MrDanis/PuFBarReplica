@@ -3,6 +3,8 @@ import { Link , useNavigate} from 'react-router-dom'
 import { BiCart } from "react-icons/bi";
 import {FaUserAlt} from "react-icons/fa";
 import HeaderCard from './HeaderCard';
+import Logo from "../Assets/LogoBlack.png"
+
 const Header = () => {
     const [showMenu,setshowMenu] = useState('none');
     const navigate = useNavigate();
@@ -21,6 +23,8 @@ const Header = () => {
     <div className="container-fluid w-100 px-5 mx-5 border border-0 border-danger">
     <Link to={'/'} className="navbar-brand">
        <img className='img-fluid m-0 p-0' src='https:////cdn.shopify.com/s/files/1/0286/8071/6332/files/Puff_Logo_Black_120x.png?v=1613687976' alt=''></img>
+       {/* <img className='img-fluid m-0 p-0' src={Logo} alt=''></img> */}
+    
     </Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>

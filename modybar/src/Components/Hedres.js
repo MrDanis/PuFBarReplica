@@ -3,6 +3,7 @@ import {Link , useNavigate} from 'react-router-dom'
 import { BiCart } from "react-icons/bi";
 import {FaUserAlt} from "react-icons/fa";
 import '../App.css'
+import Logo from "../Assets/LogoBlack.png"
 import { BsPower,BsWindows,BsFillPersonFill,BsFillLayersFill } from "react-icons/bs";
 const Hedres = () => {
     const [isHumbergerVisible,setisHumbergerVisible]= useState('visible');
@@ -23,7 +24,9 @@ const Hedres = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light position-sticky top-0 py-3 shadow">
     <div className="container-fluid mainHeaderBox border border-0 border-success px-5 mx-5">
     <Link to={'/'} className="navbar-brand d-none d-md-block">
-       <img className='img-fluid m-0 p-0 titleTag' src='https:////cdn.shopify.com/s/files/1/0286/8071/6332/files/Puff_Logo_Black_120x.png?v=1613687976' alt=''></img>
+       {/* <img className='img-fluid m-0 p-0 titleTag' src='https:////cdn.shopify.com/s/files/1/0286/8071/6332/files/Puff_Logo_Black_120x.png?v=1613687976' alt=''></img> */}
+       <img className='img-fluid m-0 p-0 titleTag' src={Logo} height={90} width={90} alt=''></img>
+    
     </Link>
     <button className="btn d-block d-md-none shadow border border-0 border-danger" onClick={()=>{setisHumbergerVisible('hidden')}} style={{visibility:isHumbergerVisible}} type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
         <span className="navbar-toggler-icon"></span>
@@ -83,7 +86,9 @@ const Hedres = () => {
  <div className="offcanvas-body">
  <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
     <li className="nav-item mx-4 mb-5 fw-bold d-flex align-items-center justify-content-center">
-    <img className='img-fluid m-0 p-0 titleTag' src='https:////cdn.shopify.com/s/files/1/0286/8071/6332/files/Puff_Logo_Black_120x.png?v=1613687976' alt=''></img>
+    {/* <img className='img-fluid m-0 p-0 titleTag' src='https:////cdn.shopify.com/s/files/1/0286/8071/6332/files/Puff_Logo_Black_120x.png?v=1613687976' alt=''></img> */}
+    <img className='img-fluid m-0 p-0' src={Logo} height={100} width={100} alt=''></img>
+   
     </li>
     {/* <li className="nav-item mb-3 mx-4 fw-bold d-flex align-items-center justify-content-center" data-bs-dismiss="offcanvas" aria-label="Close" onClick={goToHome} >
       <Link  to={'/'} className="nav-link active" aria-current="page" href="#">Home</Link>
