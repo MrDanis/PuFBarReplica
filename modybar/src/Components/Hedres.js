@@ -21,7 +21,7 @@ const Hedres = () => {
         navigate('/products/all')
     }
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light position-sticky top-0 py-3 shadow">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light position-sticky top-0 py-3 shadow" style={{zIndex:'100'}}>
     <div className="container-fluid mainHeaderBox border border-0 border-success px-5 mx-5">
     <Link to={'/'} className="navbar-brand d-none d-md-block">
        {/* <img className='img-fluid m-0 p-0 titleTag' src='https:////cdn.shopify.com/s/files/1/0286/8071/6332/files/Puff_Logo_Black_120x.png?v=1613687976' alt=''></img> */}
