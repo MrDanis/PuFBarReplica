@@ -11,9 +11,6 @@ import 'swiper/css/navigation';
 import "swiper/css/effect-coverflow";
 SwiperCore.use([Autoplay,Pagination,Navigation]);
 const BestSellers = (props) => {
-  const onChange = (key) => {
-    console.log(key);
-  };
   const breakPoints = {
     320: {
       slidesPerView: 1,
@@ -71,7 +68,7 @@ const BestSellers = (props) => {
            props.data.map((item,index)=>   
            <SwiperSlide key={index} style={{paddingBottom:'5px'}}>
             <div className='row m-0 p-0 border border-0 border-danger'>   
-              <CommonCustomCard explainImage='./CustopmCardImage.png' mainParent="col-12 mt-4 m-0 px-3 p-0 border border-0 border-dark d-flex flex-column" heading='Moody Bar' quantity='500 Puffs' flavour='17 Flavours' btnText='Shop Now' btnColor='#000' btnTextColor="white" cardText="1" childOneClass='w-100 m-0 px-2 py-4 d-flex flex-column justify-content-center align-items-center order-2' childTwoClass='w-100 m-0 p-0 d-flex align-items-center justify-content-center border border-0 border-danger'></CommonCustomCard>                     
+              <CommonCustomCard redirectdTo={`/products/${item.system_id}`} explainImage='./CustopmCardImage.png' mainParent="col-12 mt-4 m-0 px-3 p-0 border border-0 border-dark d-flex flex-column" heading='Moody Bar' quantity='500 Puffs' flavour='17 Flavours' btnText='Shop Now' btnColor='#000' btnTextColor="white" cardText="1" childOneClass='w-100 m-0 px-2 py-4 d-flex flex-column justify-content-center align-items-center order-2' childTwoClass='w-100 m-0 p-0 d-flex align-items-center justify-content-center border border-0 border-danger'></CommonCustomCard>                     
             </div>
             </SwiperSlide>)} 
         </Swiper>
@@ -106,7 +103,7 @@ const BestSellers = (props) => {
            props.data.map((item,index)=>   
            <SwiperSlide key={index} style={{paddingBottom:'5px'}}>
             <div className='row m-0 p-0 border border-0 border-danger'>   
-              <CommonCustomCard explainImage='./CustopmCardImage.png' mainParent="col-12 mt-4 m-0 px-3 p-0 border border-0 border-dark d-flex flex-column" heading='Moody Bar' quantity='500 Puffs' flavour='17 Flavours' btnText='Shop Now' btnColor='#000' btnTextColor="white" cardText="1" childOneClass='w-100 m-0 px-2 py-4 d-flex flex-column justify-content-center align-items-center order-2' childTwoClass='w-100 m-0 p-0 d-flex align-items-center justify-content-center border border-0 border-danger'></CommonCustomCard>                     
+              <CommonCustomCard redirectdTo={`/products/${item.system_id}`} explainImage='./CustopmCardImage.png' mainParent="col-12 mt-4 m-0 px-3 p-0 border border-0 border-dark d-flex flex-column" heading='Moody Bar' quantity='500 Puffs' flavour='17 Flavours' btnText='Shop Now' btnColor='#000' btnTextColor="white" cardText="1" childOneClass='w-100 m-0 px-2 py-4 d-flex flex-column justify-content-center align-items-center order-2' childTwoClass='w-100 m-0 p-0 d-flex align-items-center justify-content-center border border-0 border-danger'></CommonCustomCard>                     
             </div>
             </SwiperSlide>)} 
         </Swiper>
@@ -141,7 +138,7 @@ const BestSellers = (props) => {
            props.data.map((item,index)=>   
            <SwiperSlide key={index} style={{paddingBottom:'5px'}}>
             <div className='row m-0 p-0 border border-0 border-danger'>   
-              <CommonCustomCard explainImage='./CustopmCardImage.png' mainParent="col-12 mt-4 m-0 px-3 p-0 border border-0 border-dark d-flex flex-column" heading='Moody Bar' quantity='500 Puffs' flavour='17 Flavours' btnText='Shop Now' btnColor='#000' btnTextColor="white" cardText="1" childOneClass='w-100 m-0 px-2 py-4 d-flex flex-column justify-content-center align-items-center order-2' childTwoClass='w-100 m-0 p-0 d-flex align-items-center justify-content-center border border-0 border-danger'></CommonCustomCard>                     
+              <CommonCustomCard redirectdTo={`/products/${item.system_id}`} explainImage='./CustopmCardImage.png' mainParent="col-12 mt-4 m-0 px-3 p-0 border border-0 border-dark d-flex flex-column" heading='Moody Bar' quantity='500 Puffs' flavour='17 Flavours' btnText='Shop Now' btnColor='#000' btnTextColor="white" cardText="1" childOneClass='w-100 m-0 px-2 py-4 d-flex flex-column justify-content-center align-items-center order-2' childTwoClass='w-100 m-0 p-0 d-flex align-items-center justify-content-center border border-0 border-danger'></CommonCustomCard>                     
             </div>
             </SwiperSlide>)} 
         </Swiper>
@@ -176,7 +173,7 @@ const BestSellers = (props) => {
            props.data.map((item,index)=>   
            <SwiperSlide key={index} style={{paddingBottom:'5px'}}>
             <div className='row m-0 p-0 border border-0 border-danger'>   
-              <CommonCustomCard explainImage='./CustopmCardImage.png' mainParent="col-12 mt-4 m-0 px-3 p-0 border border-0 border-dark d-flex flex-column" heading='Moody Bar' quantity='500 Puffs' flavour='17 Flavours' btnText='Shop Now' btnColor='#000' btnTextColor="white" cardText="1" childOneClass='w-100 m-0 px-2 py-4 d-flex flex-column justify-content-center align-items-center order-2' childTwoClass='w-100 m-0 p-0 d-flex align-items-center justify-content-center border border-0 border-danger'></CommonCustomCard>                     
+              <CommonCustomCard redirectdTo={`/products/${item.system_id}`} explainImage='./CustopmCardImage.png' mainParent="col-12 mt-4 m-0 px-3 p-0 border border-0 border-dark d-flex flex-column" heading='Moody Bar' quantity='500 Puffs' flavour='17 Flavours' btnText='Shop Now' btnColor='#000' btnTextColor="white" cardText="1" childOneClass='w-100 m-0 px-2 py-4 d-flex flex-column justify-content-center align-items-center order-2' childTwoClass='w-100 m-0 p-0 d-flex align-items-center justify-content-center border border-0 border-danger'></CommonCustomCard>                     
             </div>
             </SwiperSlide>)} 
         </Swiper>

@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import {Link , useNavigate} from 'react-router-dom'
 import { BiCart } from "react-icons/bi";
+import { AiFillDelete } from "react-icons/ai";
 import {FaUserAlt} from "react-icons/fa";
 import '../App.css'
 import Logo from "../Assets/LogoBlack.png"
@@ -44,36 +45,70 @@ const Hedres = () => {
         <li onClick={goToProduct} className="nav-item mx-4 fw-bold d-flex align-items-center justify-content-center" style={{cursor:'pointer'}}>
            Products         
         </li>
-        <li className="nav-item mx-4 fw-bold fs-3 p-0 my-0 d-flex align-items-center justify-content-center">
-        <Link to={'/Shope'} className="btn btn-dark text-light nav-link active m-0 py-1 d-flex align-items-center justify-content-center"  aria-current="page">
-          Verify
-          </Link>
-          <Link to={'/Shope'} className="mx-5 text-dark nav-link active m-0 p-0 d-flex align-items-center justify-content-center"  aria-current="page">
-          <BiCart className='m-0 p-0'></BiCart>
+        <li className="nav-item fw-bold fs-3 p-0 my-0 d-flex align-items-center justify-content-center">
+          <Link to={'#'} className="mx-5 text-dark nav-link active m-0 p-0 d-flex align-items-center justify-content-center"  aria-current="page">
+          <a className="btn m-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+           <BiCart className='m-0 p-0 fs-4'></BiCart>
+          </a>
+
+             <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+               <div className="d-flex align-items-center justify-content-center flex-row flex-wrap offcanvas-header bg-light shadow">
+                <div className='m-0 p-0 w-75 d-flex align-items-center justify-content-center'>
+                 <h5 className='mx-3 text-center text-uppercase border border-0 border-success d-flex'  id="offcanvasRightLabel">
+                   Your Cart
+                 </h5>
+                </div>
+                <div className='m-0 p-0 w-25 d-flex align-items-center justify-content-center'>
+                 <button type="button" className="fs-6 m-0 p-0 btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+               </div>
+               <div className="offcanvas-body border border-0 border-danger">
+                {/* Cart Body Start */}
+                 <div className='d-flex flex-wrap flex-row'>
+                    <img  className='w-25 img-fluid m-0 p-2 shadow' src='/CustopmCardImage.png' alt='text' style={{width:'100px',height:'100px'}}></img>
+                    <p className='px-3 w-75 d-flex flex-row border border-0 border-success'>
+                      <p className='w-50 mb-0 border border-0 border-danger fs-5'>Aole Grape
+                         <p className='mt-2 border border-0 border-success d-flex flex-wrap mb-0 fs-6'>
+                            <span onClick={()=>{alert('Subtract Quantity')}} className='d-flex align-items-center justify-content-center border border-1 w-25 p-1' style={{borderTopLeftRadius:'10px',borderBottomLeftRadius:'10px'}}>
+                               -
+                            </span>
+                            <span  className='d-flex align-items-center justify-content-center border border-1 w-25 p-1'>
+                              10
+                            </span>
+                            <span onClick={()=>{alert('Add Quantity')}}  className='d-flex align-items-center justify-content-center border border-1 w-25 p-1' style={{borderTopRightRadius:'10px',borderBottomRightRadius:'10px'}}>
+                               +
+                            </span>
+                         </p>
+                      </p>  
+                      <p className='position-relative w-50 m-0 p-0 border border-0 border-dark fs-6 d-flex align-items-center justify-content-center'>
+                        <span className='position-absolute start-0 bottom-25 mt-4 fs-4'>
+                          <small className='mx-2'>
+                           $ 20.00
+                          </small>
+                           <AiFillDelete></AiFillDelete>
+                          </span>
+                       
+                      </p>
+                    </p>
+                 </div>
+                {/* Cart Body End */}
+                {/* Cart Footer */}
+                 <div className='w-100 m-0 p-3 border border-0 border-success position-absolute bottom-0 start-0'>
+                   <p className='d-flex align-items-center justify-content-between m-0 p-2 border border-0 borde-success'>
+                    <span className='m-0 p-0 fs-6 text-start fw-normal'>Subtotal</span>
+                    <span className='m-0 p-0 fs-6 text-end fw-bold'>$ 100</span>
+                   </p>
+                   <buttton className="btn w-100 text-light fs-5" style={{backgroundColor:'#000000'}}>Check Out</buttton>
+                 </div>
+               </div>
+             </div>
           </Link>
           <Link to={'/Authentication/Login'} className="fs-5 text-dark nav-link active m-0 p-0 d-flex align-items-center justify-content-center"  aria-current="page">
           <FaUserAlt className='m-0 p-0'></FaUserAlt>
           </Link>
         </li>
-        <li className="nav-item mx-4 fw-bold d-flex align-items-center justify-content-center d-none">
-          <a className="nav-link active" aria-current="page" href="#">About</a>
-        </li>
-        <li className="nav-item dropdown mx-4 fw-bold d-flex align-items-center justify-content-center d-none">
-          <a className="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Contact
-          </a>
-          <ul className="dropdown-menu d-none" aria-labelledby="navbarDropdown">
-            <li><a className="dropdown-item" href="#">Over Story</a></li>
-            <li><a className="dropdown-item" href="#">Goli for Good</a></li>
-            <li><a className="dropdown-item" href="#">Inside the Gummy</a></li>
-          </ul>
-        </li>
-        <li className="nav-item mx-4 fw-bold d-flex align-items-center justify-content-center d-none">
-          <a className="nav-link active" aria-current="page" href="#">Wholesale/Distribution</a>
-        </li>
-        <li className="nav-item mx-4 fw-bold d-flex align-items-center justify-content-center d-none">
-          <a className="nav-link active" aria-current="page" href="#">Store Locator</a>
-        </li>
+        
+      
     </ul>
      {/*User menu in mobile*/}
      <div className="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
