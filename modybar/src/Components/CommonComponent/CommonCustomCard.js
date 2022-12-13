@@ -9,7 +9,7 @@ const CommonCustomCard = (props) => {
       <div className={props.childOneClass} style={{display:'grid',gridTemplateColumns:'subgrid'}}> 
         <p className='d-flex flex-wrap'>{props.heading}</p>
         <p className='mb-0'>{props.quantity}</p>
-        <p>{props.flavour==="test"?'':props.flavour}</p>
+        <p  style={{flexDirection:"row",display:"flex"}} ><p className='textDecoration'>{props.flavour==="test"?'':"$"+props.flavour}</p> <h5>{props.offerPrice==="test"?'':"$"+props.offerPrice}</h5></p>
         <button className={props.flavour==='test'?props.btnClass:'btn text-align-bottom'} style={{backgroundColor:props.btnColor,color:props.btnTextColor}}>
         <Link className='text-light' to={props.redirectdTo}>
           {props.btnText}

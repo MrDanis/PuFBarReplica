@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import {AiFillStar} from 'react-icons/ai'
 
 const OvweCustomer = () => {
@@ -74,8 +75,12 @@ const OvweCustomer = () => {
                  <div className='row-75 m-0 p-0 border border-0 border-danger'>
                    <div className='col-10'>
                     <h1 className='fw-bold mb-3'>Smooth, Satisfying, Simple.</h1>
-                    <p className='fw-bold mb-3'>Puff Bar products are disposable, one-step systems, meaning they’re always ready when you are: no recharging, refilling, or maintenance required. When it comes to quality, we do the heavy lifting — so all that’s left for you to do is enjoy.</p>
-                    <button className='btn p-2  fw-bold text-light' style={{backgroundColor:'#000'}}>Shop All Puff Devices</button>  
+                    <p className='fw-bold mb-3'>Moody Bar products are disposable, one-step systems, meaning they’re always ready when you are: no recharging, refilling, or maintenance required. When it comes to quality, we do the heavy lifting — so all that’s left for you to do is enjoy.</p>
+                    <button className='btn p-2  fw-bold text-light' style={{backgroundColor:'#000'}}>
+                    <Link className='text-light' to='/products/all'>
+                    Shop All Moody Bar Device
+        </Link>
+                      </button>  
                    </div>
                  </div>
            </div>

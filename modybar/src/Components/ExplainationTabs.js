@@ -7,8 +7,8 @@ const ExplainationTabs = () => {
      <div className='row border border-0 border-success m-0 p-0'>
        <div className='col-6 m-0 p-0 d-flex flex-column align-items-center justify-content-center'>
        <h6 className='d-flex flex-wrap'>MOODY BAR</h6>
-        <p className='mb-0'>500 Puffs</p>
-        <p>17 Flavours</p>
+        <p className='mb-0'>6000 Puffs</p>
+        <p>20 Flavours</p>
         <button className='btn text-align-bottom' style={{backgroundColor:'#000',color:'white'}}>
         <Link className='text-light' to='/products/all'>
         Shop Now

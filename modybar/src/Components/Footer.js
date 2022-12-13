@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
         <div className='row w-100 py-5 d-flex justify-content-center m-0 p-0 border border-0 border-danger' style={{backgroundColor:'#d5d5d5'}}>
             <div className='row w-75 m-0 p-0 border border-0 border-dark d-flex justify-content-evenly'>
-             <div className='col-sm-5 col-md-2'>
+           {/*  <div className='col-sm-5 col-md-2'>
                   <h3 className='mb-4 fs-4'>Support</h3>
                   <p className='mb-1 text-secondary fs-6'>Contact Us</p>
                   <p className='mb-1 text-secondary fs-6'>Shipping Information</p>
@@ -56,7 +56,7 @@ const Footer = () => {
                     <input placeholder='email' className='p-2 mx-1 bg-light shadow border-0 rounded'></input>
                     <button className='btn text-white mx-1' style={{backgroundColor:'#000'}}>Subscribe</button>
                   </p>
-             </div>
+             </div> */}
              <div className='col-12 pt-5 px-5'>
                  
                   <p className='mx-1 mb-3 text-dark fs-6 d-flex aligh-items-center' style={{fontWeight:500}}>
@@ -66,13 +66,13 @@ const Footer = () => {
                   ADDRESS: 251 Little Falls Dr, Wilmington, DE 19807
                   </p>
                   <p className='mx-1 mb-3 text-dark fs-6 d-flex aligh-items-center' style={{fontWeight:500}}>
-                  WARNING: Puff Bar products are not intended to diagnose, treat, cure, or prevent any disease, condition, or disorder and are not smoking cessation or nicotine replacement therapy products. The FDA has not reviewed these products, nor has it evaluated their safety or any of the statements made regarding these products. Puff Bar products contain nicotine, which is a highly addictive substance, and are intended to be used only by adults at least 21 years of age who use combustible cigarettes or other tobacco or nicotine vaping products. Do not use Puff Bar products if you are pregnant or nursing, if you have heart disease, high blood pressure, diabetes, ulcers, liver or kidney disease, throat disease, asthma, or difficulty breathing. Do not use Puff Bar products if you are taking theophylline, ropinirole, or clozapine. As with other nicotine products, use of Puff Bar products can increase your heart rate and blood pressure and may cause nausea or dizziness or aggravate existing respiratory conditions. Use of Puff Bar products may expose you to certain chemicals identified as harmful and/or carcinogenic, including aldehydes, volatile organic compounds, and metals.
+                  WARNING: Moody Bar products are not intended to diagnose, treat, cure, or prevent any disease, condition, or disorder and are not smoking cessation or nicotine replacement therapy products. The FDA has not reviewed these products, nor has it evaluated their safety or any of the statements made regarding these products. Moody Bar products contain nicotine, which is a highly addictive substance, and are intended to be used only by adults at least 21 years of age who use combustible cigarettes or other tobacco or nicotine vaping products. Do not use Moody Bar products if you are pregnant or nursing, if you have heart disease, high blood pressure, diabetes, ulcers, liver or kidney disease, throat disease, asthma, or difficulty breathing. Do not use Moody Bar products if you are taking theophylline, ropinirole, or clozapine. As with other nicotine products, use of Puff Bar products can increase your heart rate and blood pressure and may cause nausea or dizziness or aggravate existing respiratory conditions. Use of Moody Bar products may expose you to certain chemicals identified as harmful and/or carcinogenic, including aldehydes, volatile organic compounds, and metals.
                   </p>
                   <p className='mx-1 mb-3 text-dark fs-6 d-flex aligh-items-center' style={{fontWeight:500}}>
-                  WARNING: Puff Bar products can expose you to chemicals including glycidol, which is known to the States of California to cause cancer, and nicotine, which is known to the State of California to cause birth defects or other reproductive harm. For more information, go to www.P65Warnings.ca.gov.
+                  WARNING: Moody Bar products can expose you to chemicals including glycidol, which is known to the States of California to cause cancer, and nicotine, which is known to the State of California to cause birth defects or other reproductive harm. For more information, go to www.P65Warnings.ca.gov.
                   </p>
                   <p className='text-center' style={{fontWeight:500}}>
-                   © Copyright 2021 - Puff Bar | All Rights Reserved
+                   © Copyright 2021 - Moody Bar | All Rights Reserved
                   </p>
              </div>
                

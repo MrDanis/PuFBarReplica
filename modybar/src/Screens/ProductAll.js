@@ -22,7 +22,8 @@ const ProductAll = () => {
                     mainParent="shadow col-12 mt-4 m-0 p-0 border border-0 border-dark d-flex flex-column"
                     heading={item.name}
                     quantity='6000 Puffs'
-                    flavour='test'
+                    flavour={item.price_normal}
+                    offerPrice={item.price_Offered}
                     btnClass='w-100 fw-bold p-2 rounded'
                     btnText='Shop Now'
                     btnColor='#000'

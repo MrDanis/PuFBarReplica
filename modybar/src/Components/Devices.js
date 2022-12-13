@@ -23,7 +23,8 @@ const Devices = (props) => {
                 mainParent="col-12 col-sm-6 col-md-3 mt-4 m-0 px-2 p-0 border border-0 border-gray d-flex flex-row"
                 heading={item.name}
                 quantity='6000 Puffs'
-                flavour='17 Flavours'
+                flavour={item.price_normal}
+                offerPrice={item.price_Offered}
                 btnText='Shop Now' 
                 btnColor='#000' 
                 btnTextColor="white"

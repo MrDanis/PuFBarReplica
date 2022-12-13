@@ -1,12 +1,14 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import {Link , useNavigate} from 'react-router-dom'
 import { BiCart } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
 import {FaUserAlt} from "react-icons/fa";
 import '../App.css'
 import Logo from "../Assets/LogoBlack.png"
+import { ProductContex } from '../ContextStore';
 import { BsPower,BsWindows,BsFillPersonFill,BsFillLayersFill } from "react-icons/bs";
 const Hedres = () => {
+  const {cartItems,billAmount,dispatcchUserEvents} = useContext(ProductContex);
     const [isHumbergerVisible,setisHumbergerVisible]= useState('visible');
     const navigate = useNavigate();
     const goToProduct =()=>{
@@ -20,6 +22,32 @@ const Hedres = () => {
     const goToCart =()=>{
         setisHumbergerVisible('hidden');
         navigate('/products/all')
+    }
+    const quantityCheckANdAdjustIncrease =(data,incrementer,index)=>{
+          if(incrementer>data.qty)
+          {
+            alert('Products is out of stock');
+          }
+          if((incrementer<=data.qty)&&(incrementer>0))
+          {
+            console.log('Index of the item is : ',index,'Incremented value is : ',(data.price_Offered*incrementer));
+            dispatcchUserEvents("INCREASE_QTY",{itemIndex:index,updatedAmount:(data.price_Offered*incrementer)})
+            // Additional bill amount and item should be pass to increase the quantity
+            alert('increase the quantity')
+          }     
+    }
+    const quantityCheckANdAdjustDecrease =(data,incrementer,index)=>{
+          if(incrementer>data.qty)
+          {
+            alert('Products is out of stock');
+          }
+          if((incrementer<=data.qty)&&(incrementer>0))
+          {
+            console.log('Index of the item is : ',index,'Incremented value is : ',(data.price_Offered*incrementer));
+            dispatcchUserEvents("DECREASE_QTY",{itemIndex:index,updatedAmount:(data.price_Offered*incrementer)})
+            // Additional bill amount and item should be pass to increase the quantity
+            alert('Decreasing the quantity')
+          }     
     }
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light position-sticky top-0 py-3 shadow" style={{zIndex:'100'}}>
@@ -64,7 +92,40 @@ const Hedres = () => {
                </div>
                <div className="offcanvas-body border border-0 border-danger">
                 {/* Cart Body Start */}
-                 <div className='d-flex flex-wrap flex-row'>
+
+                {
+                  cartItems?.length===0?<h4 className='d-flex align-items-center justify-content-center'>Your Cart is Empty</h4>:
+                  cartItems?.map((item,index)=>{return(
+                 <div className='d-flex flex-wrap flex-row border border-2 border-success' key={index}>
+                    <img  className='w-25 img-fluid m-0 p-2 shadow' src='/CustopmCardImage.png' alt='text' style={{width:'100px',height:'100px'}}></img>
+                    <p className='px-3 w-75 d-flex flex-row border border-0 border-success'>
+                      <p className='w-50 mt-1 mb-0 border border-0 border-danger' style={{fontSize:'12px'}}>{item.name}
+                         <p className='mt-2 border border-0 border-success d-flex flex-wrap mb-0 fs-6'>
+                            <span onClick={()=>{quantityCheckANdAdjustDecrease(item,item.requestedQuantity-1,index)}} className='d-flex align-items-center justify-content-center border border-1 w-25 p-1' style={{borderTopLeftRadius:'10px',borderBottomLeftRadius:'10px'}}>
+                               -
+                            </span>
+                            <span  className='d-flex align-items-center justify-content-center border border-1 w-25 p-1'>
+                              {item.requestedQuantity}
+                            </span>
+                            <span onClick={()=>{quantityCheckANdAdjustIncrease(item,item.requestedQuantity+1,index)}}  className='d-flex align-items-center justify-content-center border border-1 w-25 p-1' style={{borderTopRightRadius:'10px',borderBottomRightRadius:'10px'}}>
+                               +
+                            </span>
+                         </p>
+                      </p>  
+                      <p className='position-relative w-50 m-0 p-0 border border-0 border-dark fs-6 d-flex align-items-center justify-content-center'>
+                        <span className='position-absolute start-0 bottom-25 mt-4 fs-4'>
+                          <small className='mx-2'>
+                           $ {item.requestedQuantity*item.price_Offered}
+                          </small>
+                           <AiFillDelete onClick={()=>{dispatcchUserEvents("REMOVE_FROM_CART",{data:item,deductedAmount:item.requestedQuantity*item.price_Offered})}}></AiFillDelete>
+                          </span>
+                       
+                      </p>
+                    </p>
+                 </div>
+                  )})
+                }
+                 <div className='d-flex flex-wrap flex-row border border-2 border-success d-none'>
                     <img  className='w-25 img-fluid m-0 p-2 shadow' src='/CustopmCardImage.png' alt='text' style={{width:'100px',height:'100px'}}></img>
                     <p className='px-3 w-75 d-flex flex-row border border-0 border-success'>
                       <p className='w-50 mb-0 border border-0 border-danger fs-5'>Aole Grape
@@ -75,7 +136,7 @@ const Hedres = () => {
                             <span  className='d-flex align-items-center justify-content-center border border-1 w-25 p-1'>
                               10
                             </span>
-                            <span onClick={()=>{alert('Add Quantity')}}  className='d-flex align-items-center justify-content-center border border-1 w-25 p-1' style={{borderTopRightRadius:'10px',borderBottomRightRadius:'10px'}}>
+                            <span onClick={()=>{alert('test')}}  className='d-flex align-items-center justify-content-center border border-1 w-25 p-1' style={{borderTopRightRadius:'10px',borderBottomRightRadius:'10px'}}>
                                +
                             </span>
                          </p>
@@ -96,7 +157,7 @@ const Hedres = () => {
                  <div className='w-100 m-0 p-3 border border-0 border-success position-absolute bottom-0 start-0'>
                    <p className='d-flex align-items-center justify-content-between m-0 p-2 border border-0 borde-success'>
                     <span className='m-0 p-0 fs-6 text-start fw-normal'>Subtotal</span>
-                    <span className='m-0 p-0 fs-6 text-end fw-bold'>$ 100</span>
+                    <span className='m-0 p-0 fs-6 text-end fw-bold'>$ {billAmount}</span>
                    </p>
                    <buttton className="btn w-100 text-light fs-5" style={{backgroundColor:'#000000'}}>Check Out</buttton>
                  </div>
